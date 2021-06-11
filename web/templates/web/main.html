@@ -42,6 +42,12 @@
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+
+			<ul>
+				<li><span> {{ request.user }} </span></li>
+				<li><span><a href="{% url 'logout' %}"> LogOut </a> </span></li>
+			</ul>
+
 		</div>
 	</nav>
       {% block content %}
