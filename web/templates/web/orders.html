@@ -1,0 +1,31 @@
+﻿{% extends 'web/main.html' %}
+
+{% block content %}
+<style>
+  .items{
+     border: 2px double yellow;
+     margin-left: 20px;
+     display: inline-block;
+     width: 150px;
+     height: 200px;
+     border-radius: 20px;
+     padding: 5px;
+     margin: 10px;
+     color: yellow;
+     background-color: black;
+  }
+</style>
+
+<main>
+  {% for ord in orders %}
+  <div class="items">
+      {% if request.user == ord.user %}
+        <strong> {{ ord.user }} </strong>
+      {% else %}
+        {{ ord.user }}
+      {% endif %}
+      <h3> start: </h3>{{ ord.start_date }}
+  </div>
+  {% endfor %}
+</main>
+{% endblock content %}

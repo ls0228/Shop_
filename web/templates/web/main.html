@@ -34,12 +34,12 @@
 		<div class="container">
 			<ul class="main-nav">
 				<li><a href="{% url 'home' %}">Home</a></li>
-				<li><a href="#categories">Categories</a></li>
+				<li><a href="{% url 'item_list' %}">Categories</a></li>
 				<li><a href="{% url 'shop' %}">Shop</a></li>
 				<li class="small-logo"><a href="#header"><img src="{% static 'img/small-logo.jpg' %}" alt=""></a></li>
 				<li><a href="#client">Clients</a></li>
 				<li><a href="{% url 'team' %}">Team</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="{% url 'orders' %}">Our Orders</a></li>
 			</ul>
 			<a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
 

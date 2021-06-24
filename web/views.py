@@ -3,6 +3,22 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from .models import Item, OrderItem, Order
+
+
+def item_list(request):
+    context = {
+        'Item': Item.objects.all(),
+        'object-list': OrderItem.objects.all()
+    }
+    return render(request, "web/item_list.html", context)
+
+
+def orders(request):
+    context = {
+        'orders': Order.objects.all()
+    }
+    return render(request, "web/orders.html", context)
 
 
 def register_page(request):
